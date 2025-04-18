@@ -9,7 +9,7 @@ A simple static website hosted using an Amazon S3 bucket. Includes HTML, CSS, an
 - (Optional) AWS IAM for access control
 
 ## 🚀 Live Preview
-[View on S3](http://your-bucket-name.s3-website-us-west-1.amazonaws.com)
+[View on S3]([http://your-bucket-name.s3-website-us-west-1.amazonaws.com](http://kaulana2bucket.s3-website-us-west-1.amazonaws.com/))
 
 ## 📸 Screenshot
 ![Screenshot](screenshot.png)
