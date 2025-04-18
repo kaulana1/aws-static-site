@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+
+        <p><a href="/">Go back to the homepage</a></p>
+    </div>
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .photo-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            margin: 0;
+            padding: 1rem;
+            background: #444;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        footer {
+            background: linear-gradient(to left, #000000, #424141);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: static; /* Changed from fixed to static */
+            width: 100%;
+        }
+        section {
+            margin-bottom: 23rem;
+        }
+        #Resume {
+            display: none;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <h2>Kaulana Mo'okini</h2>
+    </header>
+    <nav>
+        <a href="#about" class="tab-link" data-tab="about">About Me</a>
+        <a href="#services" class="tab-link" data-tab="services">Skills</a>
+        <a href="#projects" class="tab-link" data-tab="projects">Projects</a>
+        <a href="#resume" class="tab-link" data-tab="resume">Resume</a>
+        <a href="#contact" class="tab-link" data-tab="contact">Contact</a>
+    </nav>
+    <main>
+        <section id="about" class="tab-content active">
+            <h2>About Me</h2>
+            <p>First year student enrolled at San Diego State University pursuing a Bachelor’s degree in computer engineering. I am deeply interested in computer programming and hardware engineering. I am also intrigued in Cyber Security.</p>
+            
+            <div class="photo-gallery">
+                <img src="./IMG_6486.jpg" alt="Photo of Kaulana Mo'okini">
+            </div>
+        </section>
+        <section id="services" class="tab-content">
+            <h2>Skills</h2>
+            <p>We offer web development, design, and consulting services.</p>
+        </section>
+        <section id="projects" class="tab-content">
+            <h2>Projects</h2>
+            <p>Check out our latest projects on GitHub.</p>
+        </section>
+        <section id="resume" class="tab-content">
+            <h2>Resume</h2>
+            <p>Download my resume <a href="resume.pdf" download>here</a>.</p>
+        </section>
+        <section id="contact" class="tab-content">
+            <h2>Contact</h2>
+            <p>Email me at: <a href="mailto:kaulanamookini@gmail.com">kaulanamookini@gmail.com</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+    <script>
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetTab = link.getAttribute('data-tab');
+
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+    </script>
